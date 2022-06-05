@@ -1,0 +1,43 @@
+Explain about String, StringBuffer, and StringBuilder class with an example. Explain also
+about toString() method in java.
+
+
+String class:
+In Java string is an object that is a sequence of characters.
+String is a class in java in java.lang package, this String class is used to create a string
+object.
+eg: String name = "Mohit";
+Here name is a variable of String  which is initialized with the string object “Mohit”.
+this name variable is a reference variable of String class.
+We can create a String object in Java in two ways:
+string literal:
+String s1 = "Rohit";
+new keyword:
+String s1 = new String("Lohit");
+
+
+StringBuffer – Allocates a new string from the string in StringBuffer
+StringBuffer is synchronized i.e. thread-safe.
+eg:
+StringBuffer sbuffer = new StringBuffer("Hello");
+String s = new String(sbuffer); 
+
+
+StringBuilder – Allocates a new string from the string in StringBuilder
+StringBuilder is non￾synchronized i.e. not thread-safe.
+eg:
+StringBuilder sbuilder = new StringBuilder("Hello");
+String s = new String(sbuilder);
+
+
+toString():
+toString() Method in java returns the value in a string format.
+eg:
+int x=10;
+System.out.println(x.tostring());
+output will be "10". 
+
+
+
+
+

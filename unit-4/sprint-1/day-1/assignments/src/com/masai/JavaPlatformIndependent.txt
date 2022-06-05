@@ -1,0 +1,13 @@
+
+How java managed to be platform-independent:
+
+In very basic term Java is platform independent because of its byte-code.
+A .Java file known as the source code, is compiled and converted into .class file known as 
+the byte-code. 
+This java byte-code is platform-independent, which means it can run on multiple platforms
+i.e. Write Once and Run Anywhere(WORA).
+These multiple platforms or Operating-system has JRE (Java Runtime Environment).
+We can also download this JRE, for various Operating-system separately.
+This JRE has a software component called JVM (Java Virtual Machine), this JVM
+takes our java byte-code and translates it to the native code for the underlying OS.
+we can compile the java code in one Operating System and execute it on another Operating System.

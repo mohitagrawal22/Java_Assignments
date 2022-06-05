@@ -1,0 +1,81 @@
+create databse web16db;
+use web16db;
+
+create table employee 
+(
+EmpID int primary key,
+EmpFname varchar(12),
+EmpLname varchar(15),
+Department varchar(12),
+Project char(2),
+Address varchar(15),
+DOB char(10),
+Gender char(1),
+Salary int 
+);
+
+
+insert into employee values(1,'Sanjay', 'Mehra', 'HR', 'P1', 'Hyderabad(HYD)', '01/12/1976', 'M', 50000);
+
+insert into employee values(2,'Ananya', 'Mishra', 'Admin', 'P2', 'Delhi(DEL )', '02/05/1968', 'F', 75000);
+
+insert into employee values(3, 'Rohan', 'Diwan', 'Account', 'P1', 'Mumbai(BOM)','01/01/1980','M',90000);
+ 
+insert into employee values(4, 'Sonia', 'Kulkarni', 'HR', 'P3', 'Hyderabad(HYD)', '02/05/1992','F', 50000);
+
+insert into employee values(5, 'Priya', 'Thakur', 'Development', 'P2', 'Bangalore', '23/02/1992', 'F', 100000);
+
+
+
+
+select * from employee where Department ='HR';
+
+select count(Gender) from Employee where Gender ='F';
+
+select * from employee where Department ='HR' AND Gender='F';
+
+select EmpFname from employee where EmpFname LIKE 'a%' OR EmpFname LIKE 'e%' OR EmpFname LIKE 'i%' OR EmpFname LIKE 'o%' OR EmpFname LIKE 'u%' ;
+
+select EmpFname from employee where ( EmpFname LIKE '_a%' OR EmpFname LIKE '_e%' OR EmpFname LIKE '_i%' OR EmpFname LIKE '_o%' OR EmpFname LIKE '_u%' )  AND ( Gender='m');
+
+select distinct(department) from employee;
+
+select * from employee where Gender='f' AND salary < 75000;
+
+select count(EmpID) from employee where salary >50000 AND salary <100000;
+
+select count(distinct(project)) from employee; 
+
+select department, COUNT(*) from employee group by department;
+
+
+
+
+
+
+
+Q2.
+1. What is the difference between a Unique Key and Primary Key?
+we can have multiple colums as Unique key But primary key can be only one.
+unique key prevents duplicate entries and can have Null value.
+primary key is a combination of not null and unique. 
+primary key is used to identify a particular row distinctly.
+
+
+2.SQL is a case-sensitive language. (True or False)
+FALSE.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
